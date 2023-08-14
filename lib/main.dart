@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'Homescreen.dart';
+import 'ADVcalc.dart';
+import 'MainPage.dart';
+import 'Table.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: MainPage(),
       debugShowCheckedModeBanner: false,
     );
   }

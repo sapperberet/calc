@@ -14,13 +14,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:
-            Text(
-              " version\n     25",
-                  style: TextStyle(
-               color: CupertinoColors.systemGrey3
-            ),
-            ),
+        // leading:
+        //     Text(
+        //       " version\n     25",
+        //           style: TextStyle(
+        //        color: CupertinoColors.systemGrey3
+        //     ),
+        //     ),
         //
         // Icon(
         //   CupertinoIcons.chart_pie,
