@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'dart:math';
 
 import 'package:dart_eval/dart_eval.dart';
 class ADVHome extends StatefulWidget {
@@ -105,27 +104,27 @@ class _ADVHomeState extends State<ADVHome> {
                       width: 450,
                       height: 200,
 
-                      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15)), border: Border.all(color: Colors.black, width: 4.0, style: BorderStyle.solid,),color: Colors.white
+                      decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(15)), border: Border.all(color: Colors.black, width: 4.0, style: BorderStyle.solid,),color: Colors.white
                       ),
                       child: Stack(
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 x,
-                                style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),
+                                style: const TextStyle(fontSize: 35,fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
                           Align(
                             alignment: Alignment.bottomRight,
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 "$ans",
-                                style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),
+                                style: const TextStyle(fontSize: 50,fontWeight: FontWeight.bold),
 
                               ),
                             ),
@@ -170,61 +169,61 @@ class _ADVHomeState extends State<ADVHome> {
 
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.red,
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: Colors.red,
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
                                         x="";
                                         ans=0;
                                       }); },
-                                      child: Text('AC'),
+                                      child: const Text('AC'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
                                         x+="$ans";
 
                                       }); },
-                                      child: Text('Ans'),
+                                      child: const Text('Ans'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {
                                         setState(() {
-                                          if (x.length != 0) {
+                                          if (x.isNotEmpty) {
                                             x = x.substring(0, x.length - 1);
                                           }
                                         });
                                       },
-                                      child: Text('Del'),
+                                      child: const Text('Del'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
 
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"/";
+                                        x="$x/";
                                       }); },
-                                      child: Text('➗'),
+                                      child: const Text('➗'),
                                     )
                                     ,
                                   ],
@@ -235,120 +234,58 @@ class _ADVHomeState extends State<ADVHome> {
                                   children: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"7";
+                                        x="${x}7";
                                       }); },
-                                      child: Text('7'),
+                                      child: const Text('7'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"8";
+                                        x="${x}8";
                                       }); },
-                                      child: Text('8'),
+                                      child: const Text('8'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"9";
+                                        x="${x}9";
                                       }); },
-                                      child: Text('9'),
+                                      child: const Text('9'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(70, 0, 70, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
 
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"*";
+                                        x="$x*";
                                       }); },
-                                      child: Text('✖'),
-                                    )
-                                    ,
-                                  ],
-
-
-                                ),
-                                Row(
-                                  children: [
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
-
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
-                                      ),
-                                      onPressed: () {setState(() {
-                                        x=x+"4";
-                                      }); },
-                                      child: Text('4'),
-                                    )
-                                    ,
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
-
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
-                                      ),
-                                      onPressed: () {setState(() {
-                                        x=x+"5";
-                                      }); },
-                                      child: Text('5'),
-                                    )
-                                    ,
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
-
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
-                                      ),
-                                      onPressed: () {setState(() {
-                                        x=x+"6";
-                                      }); },
-                                      child: Text('6'),
-                                    )
-                                    ,
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
-                                      ),
-                                      onPressed: () {setState(() {
-                                        x=x+"-";
-                                      }); },
-                                      child: Text('➖'),
+                                      child: const Text('✖'),
                                     )
                                     ,
                                   ],
@@ -359,58 +296,58 @@ class _ADVHomeState extends State<ADVHome> {
                                   children: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"1";
+                                        x="${x}4";
                                       }); },
-                                      child: Text('1'),
+                                      child: const Text('4'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"2";
+                                        x="${x}5";
                                       }); },
-                                      child: Text('2'),
+                                      child: const Text('5'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"3";
+                                        x="${x}6";
                                       }); },
-                                      child: Text('3'),
+                                      child: const Text('6'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
 
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(70, 0, 70, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"+";
+                                        x="$x-";
                                       }); },
-                                      child: Text('➕'),
+                                      child: const Text('➖'),
                                     )
                                     ,
                                   ],
@@ -421,54 +358,116 @@ class _ADVHomeState extends State<ADVHome> {
                                   children: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"0";
+                                        x="${x}1";
                                       }); },
-                                      child: Text('0'),
+                                      child: const Text('1'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+"(";
+                                        x="${x}2";
                                       }); },
-                                      child: Text('('),
+                                      child: const Text('2'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                          primary: Colors.blue,
+                                          backgroundColor: Colors.blue,
 
-                                          padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
-
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
-                                        x=x+")";
+                                        x="${x}3";
                                       }); },
-                                      child: Text(')'),
+                                      child: const Text('3'),
                                     )
                                     ,
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
 
-                                          primary: CupertinoColors.activeGreen,
-                                          padding: EdgeInsets.fromLTRB(80, 0, 80, 0),
-                                          shape: CircleBorder(),
-                                          minimumSize: Size.fromRadius(30)
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(70, 0, 70, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
+                                      ),
+                                      onPressed: () {setState(() {
+                                        x="$x+";
+                                      }); },
+                                      child: const Text('➕'),
+                                    )
+                                    ,
+                                  ],
+
+
+                                ),
+                                Row(
+                                  children: [
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
+                                      ),
+                                      onPressed: () {setState(() {
+                                        x="${x}0";
+                                      }); },
+                                      child: const Text('0'),
+                                    )
+                                    ,
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
+                                      ),
+                                      onPressed: () {setState(() {
+                                        x="$x(";
+                                      }); },
+                                      child: const Text('('),
+                                    )
+                                    ,
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+
+                                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
+
+                                      ),
+                                      onPressed: () {setState(() {
+                                        x="$x)";
+                                      }); },
+                                      child: const Text(')'),
+                                    )
+                                    ,
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+
+                                          backgroundColor: CupertinoColors.activeGreen,
+                                          padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
+                                          shape: const CircleBorder(),
+                                          minimumSize: const Size.fromRadius(30)
                                       ),
                                       onPressed: () {setState(() {
                                         // x=x+"";
@@ -478,7 +477,7 @@ class _ADVHomeState extends State<ADVHome> {
                                         alist.add("$x = $ans");
                                         x='';
                                       }); },
-                                      child: Text('='),
+                                      child: const Text('='),
                                     )
                                     ,
                                   ],
@@ -983,7 +982,7 @@ class _ADVHomeState extends State<ADVHome> {
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             tileColor: index.isOdd ? Theme.of(context).colorScheme.primary.withOpacity(0.05) : Theme.of(context).colorScheme.primary.withOpacity(0.15),
-            title: Text("${index+1}) ${alist[index]}",style: TextStyle(fontSize: 25),),
+            title: Text("${index+1}) ${alist[index]}",style: const TextStyle(fontSize: 25),),
           );
         },
       ),

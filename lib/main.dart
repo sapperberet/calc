@@ -1,10 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'Homescreen.dart';
-import 'ADVcalc.dart';
 import 'MainPage.dart';
-import 'Table.dart';
-
-void main() {
+import 'Sign.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await  Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MainPage(),
+      theme: ThemeData(),
+      darkTheme: ThemeData.dark(),
+
+      home: const Sign(),
       debugShowCheckedModeBanner: false,
     );
   }

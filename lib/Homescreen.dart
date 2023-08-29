@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   int x=0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
         // Icon(
         //   CupertinoIcons.chart_pie,
         // ),
-        title: Text("              ✖\n\n➕  Calculator  ➖\n\n              ➗"),
+        title: const Text("              ✖\n\n➕  Calculator  ➖\n\n              ➗"),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -52,7 +53,7 @@ class _HomeState extends State<Home> {
               Column(
                 children:[
                 Text("$x",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 200,
                     fontWeight:  FontWeight.bold
                   ),
@@ -71,13 +72,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x++;
                       }); },
-                      child: Text('Add by 1'),
+                      child: const Text('Add by 1'),
                     )
                     ,
 
@@ -87,13 +88,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x+=2;
                       }); },
-                      child: Text('Add by 2'),
+                      child: const Text('Add by 2'),
                     )
                     ,
 
@@ -103,13 +104,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x+=3;
                       }); },
-                      child: Text('Add by 3'),
+                      child: const Text('Add by 3'),
                     )
                     ,
 
@@ -119,13 +120,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x+=4;
                       }); },
-                      child: Text('Add by 4'),
+                      child: const Text('Add by 4'),
                     )
                     ,
 
@@ -135,13 +136,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x+=5;
                       }); },
-                      child: Text('Add by 5'),
+                      child: const Text('Add by 5'),
                     )
                     ,
 
@@ -149,7 +150,7 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
           Row(
@@ -159,13 +160,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x-=1;
                       }); },
-                      child: Text('Subtract by 1'),
+                      child: const Text('Subtract by 1'),
                     )
                     ,
 
@@ -175,13 +176,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x-=2;
                       }); },
-                      child: Text('Subtract by 2'),
+                      child: const Text('Subtract by 2'),
                     )
                     ,
 
@@ -191,13 +192,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x-=3;
                       }); },
-                      child: Text('Subtract by 3'),
+                      child: const Text('Subtract by 3'),
                     )
                     ,
 
@@ -207,13 +208,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x-=4;
                       }); },
-                      child: Text('Subtract by 4'),
+                      child: const Text('Subtract by 4'),
                     )
                     ,
 
@@ -223,13 +224,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x-=5;
                       }); },
-                      child: Text('Subtract by 5'),
+                      child: const Text('Subtract by 5'),
                     )
                     ,
 
@@ -237,7 +238,7 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
           Row(
@@ -247,13 +248,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x*=1;
                       }); },
-                      child: Text('Multiply by 1'),
+                      child: const Text('Multiply by 1'),
                     )
                     ,
 
@@ -263,13 +264,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x*=2;
                       }); },
-                      child: Text('Multiply by 2'),
+                      child: const Text('Multiply by 2'),
                     )
                     ,
 
@@ -279,13 +280,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x*=3;
                       }); },
-                      child: Text('Multiply by 3'),
+                      child: const Text('Multiply by 3'),
                     )
                     ,
 
@@ -295,13 +296,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x*=4;
                       }); },
-                      child: Text('Multiply by 4'),
+                      child: const Text('Multiply by 4'),
                     )
                     ,
 
@@ -311,13 +312,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x*=5;
                       }); },
-                      child: Text('Multiply by 5'),
+                      child: const Text('Multiply by 5'),
                     )
                     ,
 
@@ -325,7 +326,7 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
           Row(
@@ -335,13 +336,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=(x/1) as int;
                       }); },
-                      child: Text('Divide by 1'),
+                      child: const Text('Divide by 1'),
                     )
                     ,
 
@@ -351,13 +352,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=x/2 as int;
                       }); },
-                      child: Text('Divide by 2'),
+                      child: const Text('Divide by 2'),
                     )
                     ,
 
@@ -367,13 +368,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=x/3 as int;
                       }); },
-                      child: Text('Divide by 3'),
+                      child: const Text('Divide by 3'),
                     )
                     ,
 
@@ -383,13 +384,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=x/4 as int;
                       }); },
-                      child: Text('Divide by 4'),
+                      child: const Text('Divide by 4'),
                     )
                     ,
 
@@ -399,13 +400,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=x/5 as int;
                       }); },
-                      child: Text('Divide by 5'),
+                      child: const Text('Divide by 5'),
                     )
                     ,
 
@@ -413,7 +414,7 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
           Row(
@@ -423,13 +424,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=pow(x,2) as int;
                       }); },
-                      child: Text('power 2'),
+                      child: const Text('power 2'),
                     )
                     ,
 
@@ -439,13 +440,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=sqrt(x) as int;
                       }); },
-                      child: Text('√x'),
+                      child: const Text('√x'),
                     )
                     ,
 
@@ -455,16 +456,16 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         var rng =Random();
 
 
-                        x=rng.nextInt(100) as int;
+                        x=rng.nextInt(100);
                       }); },
-                      child: Text('Random'),
+                      child: const Text('Random'),
                     )
                     ,
 
@@ -474,13 +475,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=-x;
                       }); },
-                      child: Text('-M'),
+                      child: const Text('-M'),
                     )
                     ,
 
@@ -504,13 +505,13 @@ class _HomeState extends State<Home> {
               // ),
             ],
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
-          Divider(
+          const Divider(
             color: CupertinoColors.white,
           ),
 
@@ -521,13 +522,13 @@ class _HomeState extends State<Home> {
                   children:[
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue,
+                        backgroundColor: Colors.blue,
 
                       ),
                       onPressed: () {setState(() {
                         x=0;
                       }); },
-                      child: Text('Reset'),
+                      child: const Text('Reset'),
                     )
                     ,
 

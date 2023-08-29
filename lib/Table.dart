@@ -14,7 +14,7 @@ class _TobleState extends State<Toble> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Editable Table',
-      home: MyHomePage(title: 'Welcome Back'),
+      home: const MyHomePage(title: 'Welcome Back'),
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: Colors.blue,
@@ -29,7 +29,7 @@ class _TobleState extends State<Toble> {
 
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -104,8 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
         leadingWidth: 200,
         leading: TextButton.icon(
             onPressed: () => _addNewRow(),
-            icon: Icon(Icons.add),
-            label: Text(
+            icon: const Icon(Icons.add),
+            label: const Text(
               'Add',
               style: TextStyle(fontWeight: FontWeight.bold),
             )),
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(8.0),
             child: TextButton(
                 onPressed: () => _printEditedRows(),
-                child: Text('Print Edited Rows',
+                child: const Text('Print Edited Rows',
                     style: TextStyle(fontWeight: FontWeight.bold))),
           )
         ],
@@ -134,9 +134,9 @@ class _MyHomePageState extends State<MyHomePage> {
           print(value);
         },
         borderColor: Colors.blueGrey,
-        tdStyle: TextStyle(fontWeight: FontWeight.bold),
+        tdStyle: const TextStyle(fontWeight: FontWeight.bold),
         trHeight: 80,
-        thStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        thStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
         thAlignment: TextAlign.center,
         thVertAlignment: CrossAxisAlignment.end,
         thPaddingBottom: 3,
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tdPaddingBottom: 14,
         tdPaddingLeft: 10,
         tdPaddingRight: 8,
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.blue),
             borderRadius: BorderRadius.all(Radius.circular(0))),
       ),
